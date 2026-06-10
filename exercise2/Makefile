@@ -6,3 +6,6 @@ hello: hello.c
 
 count3s: counts3s.c
 	$(CC) $(CFLAGS) -o counts3s counts3s.c
+
+matrix_vector: matrix_vector.c
+	$(CC) $(CFLAGS) -o matrix_vector matrix_vector.c
