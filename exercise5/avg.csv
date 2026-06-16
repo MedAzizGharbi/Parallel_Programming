@@ -1,0 +1,28 @@
+pi_par_loop,2,2.78901
+Variant_B,2,2.78271
+Variant_A,8,11.96
+pi_par, 16,3.96826
+pi_par_loop,4,1.40432
+Variant_B,4,1.41026
+Variant_A,32,34.0717
+pi_par, 8,6.98406
+pi_par_loop,32,0.313059
+Variant_B,32,0.316819
+Variant_A,16,19.4307
+pi_par, 64,1.78324
+pi_par_loop,16,0.417736
+pi_par_loop,8,0.816155
+Variant_B,16,0.446833
+Variant_B,8,0.758111
+Variant_A,64,85.1163
+Variant_A,1,0.611974
+Variant_A,2,3.47075
+pi_par_loop,64,0.221574
+Variant_B,64,0.230611
+pi_par, 1,52.6682
+Variant_A,4,7.03727
+pi_par, 2,26.3527
+pi_par_loop,1,5.62131
+Variant_B,1,5.57401
+pi_par, 32,2.57206
+pi_par, 4,13.2622
