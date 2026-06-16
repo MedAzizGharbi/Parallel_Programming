@@ -1,0 +1,37 @@
+#include <omp.h>
+#include <stdio.h>
+#include <stdlib.h>
+static int W = 2000;
+static int H = 2000;
+static int max_iter = 10000;
+
+static int mandel_pixel(double cr, double ci, int max_iter) {
+  double zr = 0.0, zi = 0.0;
+  int n = 0;
+  while (n < max_iter && zr * zr + zi * zi <= 4.0) {
+    double zr2 = zr * zr - zi * zi + cr;
+    zi = 2.0 * zr * zi + ci;
+    zr = zr2;
+    ++n;
+  }
+  return n;
+}
+
+int main(int argc, char *argv[]) {
+  const double x_min = -2.0, y_min = -1.5;
+  const double dx = (1.0 - x_min) / W;
+  const double dy = (1.0 - y_min) / H;
+  double *pixels = malloc(W * H * sizeof(double));
+  double start = omp_get_wtime();
+#pragma omp parallel for schedule(static)
+  for (int i = 0; i < H; i++) {
+    double ci = y_min + i * dy;
+    for (int j = 0; j < W; j++) {
+      double cr = x_min + j * dx;
+      pixels[i * W + j] = mandel_pixel(cr, ci, max_iter);
+    }
+  }
+  double end = omp_get_wtime();
+  printf("Time spent : %f\n", end - start);
+  return 0;
+}

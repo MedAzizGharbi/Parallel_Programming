@@ -12,3 +12,6 @@ pi_par_critical: pi_par_critical.c
 
 pi_par_loop: pi_par_loop.c
 	$(CC) $(CFLAGS) -o pi_par_loop pi_par_loop.c
+
+mandelbrot: mandelbrot.c
+	$(CC) $(CFLAGS) -o mandelbrot mandelbrot.c
