@@ -7,14 +7,15 @@
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-N_VALUES=10000
-THREADS_VALUES=(1 2 4 8 16 32 64)
+N_VALUES=(500 1000 2000)
+THREADS_VALUES=(1 2 4 8)
 
 OUTPUT=/home/fd0007977/out/results.csv
 
-for T in "${THREADS_VALUES[@]}"; do
-	for run in {1..3}; do
-		./mandelbrot $N $T >> $OUTPUT
-	done
+for N in "${N_VALUES[@]}"; do
+    for T in "${THREADS_VALUES[@]}"; do
+        for run in {1..3}; do
+            ./matmul $N $T >> $OUTPUT
+        done
+    done
 done
-
