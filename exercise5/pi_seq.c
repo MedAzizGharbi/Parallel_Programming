@@ -23,6 +23,6 @@ int main(int argc, char *argv[]) {
   double end = omp_get_wtime();
   double elapsed = end - start;
   pi = sum * step;
-  printf("pi_seq, %ld, 1, %f, %f", num_steps, elapsed, pi);
+  printf("pi_seq, %ld, 1, %f, %f\n", num_steps, elapsed, pi);
   return 0;
 }

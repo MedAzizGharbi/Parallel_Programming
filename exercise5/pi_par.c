@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
   double i;
   double x, pi, sum = 0.0;
   if (argc < 3) {
-    printf("Usage : ./pi_seq <num_steps> <num_threads>");
+    printf("Usage : ./pi_par <num_steps> <num_threads>");
     return 1;
   }
 
@@ -38,6 +38,6 @@ int main(int argc, char *argv[]) {
   double end = omp_get_wtime();
   double elapsed = end - start;
   pi = sum * step;
-  printf("pi_par, %ld, %d, %f, %f", num_steps, NUM_THREADS, elapsed, pi);
+  printf("pi_par, %ld, %d, %f, %f\n", num_steps, NUM_THREADS, elapsed, pi);
   return 0;
 }

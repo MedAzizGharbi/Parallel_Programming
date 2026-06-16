@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
   double pi = sum * step;
 
-  printf("%s,%ld,%d,%f,%f\n", VARIANT_A ? "A" : "B", num_steps, NUM_THREADS,
+  printf("%s,%ld,%d,%f,%f\n", VARIANT_A ? "Variant_A" : "Variant_B", num_steps, NUM_THREADS,
          end - start, pi);
 
   return 0;
