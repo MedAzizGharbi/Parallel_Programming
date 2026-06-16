@@ -11,6 +11,6 @@ OUTPUT=/home/fd0007977/out/results.csv
 
 for T in "${THREADS_VALUES[@]}"; do
 	for run in {1..3}; do
-		./pi_par_critical $N $T >> $OUTPUT
+		./pi_par_loop $N $T >> $OUTPUT
 	done
 done
