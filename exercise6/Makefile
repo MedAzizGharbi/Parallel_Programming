@@ -9,3 +9,9 @@ matmul_ikj: matmul_ikj.c
 
 matmul_tiled: matmul_tiled.c
 	$(CC) $(CFLAGS) -o matmul_tiled matmul_tiled.c
+
+histogram: histogram.c
+	$(CC) $(CFLAGS) -o histogram histogram.c
+
+collatz: collatz.c
+	$(CC) $(CFLAGS) -o collatz collatz.c
